@@ -1,7 +1,7 @@
 import React from "react";
 export default function Form2({ pageNumber, setPageNumber }) {
   return (
-    <div>
+    <div id="step3">
       <input
         type="number"
         id="card_info"
