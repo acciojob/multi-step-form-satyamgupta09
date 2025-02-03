@@ -9,12 +9,16 @@ export default function Form2({ pageNumber, setPageNumber }) {
         placeholder="Credit Card Number"
       />
       <input type="text" id="expiry_date" placeholder="Expiry Date" />
-      <button
-        onClick={() => setPageNumber((prevPageNumber) => prevPageNumber - 1)}
-      >
-        Previous
-      </button>
-      <button>Submit</button>
+<button
+  onClick={(e) => {
+    e.preventDefault(); // Prevent form submission
+    setPageNumber((prevPageNumber) => prevPageNumber - 1);
+  }}
+>
+  Previous
+</button>
+<button onClick={(e) => e.preventDefault()}>Submit</button>
+
     </div>
   );
 }
